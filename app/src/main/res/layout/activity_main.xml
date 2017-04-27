@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#014F8D"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="1">
+        <!--乐器栏-->
+        <ImageView
+            android:id="@+id/iv_yellow1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/yellow2"
+            android:layout_below="@+id/iv_yellow2" />
+        <ImageView
+            android:id="@+id/iv_yellow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/yellow1"
+            android:layout_marginLeft="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_music"
+            />
+        <TextView
+            android:id="@+id/tv_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="乐理"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:textSize="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_yellow1"
+            android:layout_toEndOf="@+id/iv_yellow1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_weight="5">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="17dp"
+            android:layout_marginEnd="17dp"
+            android:orientation="horizontal" >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recv_data"
+                android:layout_width="match_parent"
+                android:layout_height="237dp"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_green"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/green1"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/lv_units"
+            android:layout_toEndOf="@+id/lv_units"
+            android:layout_marginTop="20dp"/>
+
+        <ListView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_units"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

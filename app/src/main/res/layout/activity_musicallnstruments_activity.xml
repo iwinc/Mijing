@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_musicallnstruments_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#014F8D"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="1">
+        <!--乐器栏-->
+        <ImageView
+            android:id="@+id/iv_yellow1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/yellow2"
+            android:layout_below="@+id/iv_yellow2" />
+        <ImageView
+            android:id="@+id/iv_yellow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/yellow1"
+            android:layout_marginLeft="48dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/tv_music"
+            />
+        <TextView
+            android:id="@+id/tv_music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="民族乐器"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:textSize="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_yellow1"
+            android:layout_toEndOf="@+id/iv_yellow1" />
+    </RelativeLayout>
+    <!--乐器介绍布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+        <!--乐器播放布局-->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        <!--播放布局-->
+            <TextView
+                android:text="乐器名称："
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:id="@+id/textView"
+                android:textSize="15dp"
+                android:layout_below="@+id/relativeLayout2"
+                android:layout_alignLeft="@+id/relativeLayout2"
+                android:layout_alignStart="@+id/relativeLayout2" />
+            <TextView
+                android:text="电子琴"
+                android:textColor="#ffffff"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_instrumentName"
+                android:layout_alignBottom="@+id/textView"
+                android:layout_toRightOf="@+id/textView"
+                android:layout_alignTop="@+id/textView"
+                android:layout_alignRight="@+id/relativeLayout2"
+                android:layout_alignEnd="@+id/relativeLayout2" />
+
+            <LinearLayout
+                android:background="#ffffff"
+                android:layout_width="150dp"
+                android:layout_height="220dp"
+                android:gravity="center"
+                android:layout_marginTop="22dp"
+                android:id="@+id/relativeLayout2"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+                <ImageView
+                    android:id="@+id/instrumentImager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"/>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <SeekBar
+                        android:id="@+id/sbv_musiclenth"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:progressDrawable="@drawable/bacg_seekbar"
+                        android:thumb="@drawable/po_seekbar"
+                        android:maxHeight="1dip"
+                        android:minHeight="1dip"
+                        android:layout_above="@+id/iv_musicplay"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/play"
+                        android:id="@+id/iv_musicplay"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="11dp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--乐器介绍布局-->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:text="乐器介绍"
+                android:textSize="22dp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/scrollView2"
+                android:layout_alignStart="@+id/scrollView2" />
+
+            <ScrollView
+                android:layout_width="150dp"
+                android:layout_height="250dp"
+                android:id="@+id/scrollView2"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+                    <TextView
+                        android:text="这里添加乐器的介绍内容"
+                        android:textColor="#ffffff"
+                        android:id="@+id/tv_instrumentJS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"/>
+              </LinearLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@mipmap/green1" />
+        <!--演奏技巧布局-->
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ScrollView
+                android:layout_width="150dp"
+                android:layout_height="250dp"
+                android:layout_below="@+id/textView4"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/scrollView3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="这里添加乐器的演奏技巧"
+                        android:textColor="#ffffff"
+                        android:id="@+id/tv_instrumentJQ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15dp"/>
+                </LinearLayout>
+
+            </ScrollView>
+
+            <TextView
+                android:text="演奏技巧"
+                android:textSize="22dp"
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/scrollView3"
+                android:layout_alignStart="@+id/scrollView3" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
